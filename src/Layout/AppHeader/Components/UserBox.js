@@ -22,7 +22,15 @@ import { logout } from '../../../actions/auth';
 import city3 from "../../../assets/utils/images/dropdown-header/city3.jpg";
 import avatar1 from "../../../assets/utils/images/avatars/1.jpg";
 
-const UserBox = ({ logout }) => {
+const mapStateToProps = state => {
+  console.log(state.auth.user.avatar)
+  return {
+    name: state.auth.user.name,
+    avatar: state.auth.user.avatar
+  };
+};
+
+const UserBox = ({ logout, name, avatar }) => {
 
   return (
     <Fragment>
@@ -32,7 +40,7 @@ const UserBox = ({ logout }) => {
             <div className="widget-content-left">
               <UncontrolledButtonDropdown>
                 <DropdownToggle color="link" className="p-0">
-                  <img width={42} className="rounded-circle" src={avatar1} alt="" />
+                  <img width={42} className="rounded-circle" src={avatar} alt="" />
                   <FontAwesomeIcon
                     className="ml-2 opacity-8"
                     icon={faAngleDown}
@@ -49,12 +57,12 @@ const UserBox = ({ logout }) => {
                         <div className="widget-content p-0">
                           <div className="widget-content-wrapper">
                             <div className="widget-content-left mr-3">
-                              <img width={42} className="rounded-circle" src={avatar1} alt="" />
+                              <img width={42} className="rounded-circle" src={avatar} alt="" />
                             </div>
                             <div className="widget-content-left">
                               <div className="widget-heading">
-                                Alina Mcloughlin
-                                </div>
+                                {name}
+                              </div>
                             </div>
                             <div className="widget-content-right mr-2">
                               <Button className="btn-pill btn-shadow btn-shine" color="focus" onClick={logout} href="#/user/login">
@@ -100,7 +108,9 @@ const UserBox = ({ logout }) => {
               </UncontrolledButtonDropdown>
             </div>
             <div className="widget-content-left  ml-3 header-user-info">
-              <div className="widget-heading">Alina Mclourd</div>
+              <div className="widget-heading">
+                {name}
+              </div>
             </div>
           </div>
         </div>
@@ -114,6 +124,6 @@ UserBox.propTypes = {
 }
 
 export default connect(
-  null,
+  mapStateToProps,
   { logout }
 )(UserBox);
