@@ -33,13 +33,13 @@ export default class Login extends Component {
                     <div className="slide-img-bg"
                       style={{
                         backgroundImage: "url(" + bg1 + ")",
-                      }}/>
+                      }} />
                     <div className="slider-content">
-                      <h3>Perfect Balance</h3>
+                      <h3>Listen With Friends</h3>
                       <p>
-                        ArchitectUI is like a dream. Some think it's too good to
-                        be true! Extensive collection of unified React Boostrap
-                        Components and Elements.
+                        With Listen Lab, you can listen to Spotify in real-time
+                        with your friends. Just create a room and send others
+                        the invite link to let them join in the fun!
                       </p>
                     </div>
                   </div>
@@ -47,13 +47,14 @@ export default class Login extends Component {
                     <div className="slide-img-bg"
                       style={{
                         backgroundImage: "url(" + bg3 + ")",
-                      }}/>
+                      }} />
                     <div className="slider-content">
-                      <h3>Scalable, Modular, Consistent</h3>
+                      <h3>Vote For Songs</h3>
                       <p>
-                        Easily exclude the components you don't require.
-                        Lightweight, consistent Bootstrap based styles across
-                        all elements and components
+                        With Listen Lab, the community decides what plays next.
+                        Simply submit song requests and vote for your favorite
+                        songs. After every song, the next highest-voted song
+                        begins!
                       </p>
                     </div>
                   </div>
@@ -61,12 +62,14 @@ export default class Login extends Component {
                     <div className="slide-img-bg opacity-6"
                       style={{
                         backgroundImage: "url(" + bg2 + ")",
-                      }}/>
+                      }} />
                     <div className="slider-content">
-                      <h3>Complex, but lightweight</h3>
+                      <h3>Create Playlists</h3>
                       <p>
-                        We've included a lot of components that cover almost all
-                        use cases for any type of application.
+                        Had a great Listen Lab session with friends and want
+                        to save the tracklist? No problem! At any time in your
+                        room you can export the track history to a Spotify
+                        playlist!
                       </p>
                     </div>
                   </div>
@@ -82,24 +85,24 @@ export default class Login extends Component {
                 </h4>
                 <h6 className="mt-3">
                   No account?{" "}
-                  <a href="https://colorlib.com/" onClick={(e) => e.preventDefault()} className="text-primary">
+                  <a href="#/user/register" className="text-primary">
                     Sign up now
                   </a>
                 </h6>
                 <Row className="divider" />
                 <div>
-                  <Form>
+                  <Form onSubmit={() => console.log('Submitted')}>
                     <Row form>
                       <Col md={6}>
                         <FormGroup>
                           <Label for="exampleEmail">Email</Label>
-                          <Input type="email" name="email" id="exampleEmail" placeholder="Email here..."/>
+                          <Input type="email" name="email" id="exampleEmail" placeholder="Email here..." />
                         </FormGroup>
                       </Col>
                       <Col md={6}>
                         <FormGroup>
                           <Label for="examplePassword">Password</Label>
-                          <Input type="password" name="password" id="examplePassword" placeholder="Password here..."/>
+                          <Input type="password" name="password" id="examplePassword" placeholder="Password here..." />
                         </FormGroup>
                       </Col>
                     </Row>
@@ -112,11 +115,11 @@ export default class Login extends Component {
                     <Row className="divider" />
                     <div className="d-flex align-items-center">
                       <div className="ml-auto">
-                        <a href="https://colorlib.com/" onClick={(e) => e.preventDefault()} className="btn-lg btn btn-link" >
+                        <a href="#/user/forgot-password" className="btn-lg btn btn-link" >
                           Recover Password
                         </a>{" "}
                         <Button color="primary" size="lg">
-                          Login to Dashboard
+                          Login
                         </Button>
                       </div>
                     </div>

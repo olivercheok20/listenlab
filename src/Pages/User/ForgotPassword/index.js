@@ -33,7 +33,7 @@ export default class ForgotPassword extends Component {
                     <div className="slide-img-bg"
                       style={{
                         backgroundImage: "url(" + bg1 + ")",
-                      }}/>
+                      }} />
                     <div className="slider-content">
                       <h3>Perfect Balance</h3>
                       <p>
@@ -47,7 +47,7 @@ export default class ForgotPassword extends Component {
                     <div className="slide-img-bg"
                       style={{
                         backgroundImage: "url(" + bg3 + ")",
-                      }}/>
+                      }} />
                     <div className="slider-content">
                       <h3>Scalable, Modular, Consistent</h3>
                       <p>
@@ -61,7 +61,7 @@ export default class ForgotPassword extends Component {
                     <div className="slide-img-bg opacity-6"
                       style={{
                         backgroundImage: "url(" + bg2 + ")",
-                      }}/>
+                      }} />
                     <div className="slider-content">
                       <h3>Complex, but lightweight</h3>
                       <p>
@@ -87,13 +87,13 @@ export default class ForgotPassword extends Component {
                       <Col md={12}>
                         <FormGroup>
                           <Label for="exampleEmail">Email</Label>
-                          <Input type="email" name="email" id="exampleEmail" placeholder="Email here..."/>
+                          <Input type="email" name="email" id="exampleEmail" placeholder="Email here..." />
                         </FormGroup>
                       </Col>
                     </Row>
                     <div className="mt-4 d-flex align-items-center">
                       <h6 className="mb-0">
-                        <a href="https://colorlib.com/" onClick={(e) => e.preventDefault()} className="text-primary">
+                        <a href="#/user/login" className="text-primary">
                           Sign in existing account
                         </a>
                       </h6>

@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import { Route } from "react-router-dom";
+import { Route, Redirect } from "react-router-dom";
 
 // USER PAGES
 
@@ -15,6 +15,9 @@ const UserPages = ({ match }) => (
       <Route path={`${match.url}/login`} component={Login} />
       <Route path={`${match.url}/register`} component={Register} />
       <Route path={`${match.url}/forgot-password`} component={ForgotPassword} />
+      <Route exact path={`${match.url}`} render={() => (
+        <Redirect to={`${match.url}/login`} />
+      )} />
     </div>
   </Fragment>
 );

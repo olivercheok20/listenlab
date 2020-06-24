@@ -2,6 +2,8 @@ import React, { Fragment, Component } from "react";
 
 import Slider from "react-slick";
 
+import bg1 from "../../../assets/utils/images/originals/city.jpg";
+import bg2 from "../../../assets/utils/images/originals/citydark.jpg";
 import bg3 from "../../../assets/utils/images/originals/citynights.jpg";
 
 import { Col, Row, Button, Form, FormGroup, Label, Input } from "reactstrap";
@@ -43,13 +45,13 @@ export default class Register extends Component {
                           <Label for="exampleEmail">
                             <span className="text-danger">*</span> Email
                           </Label>
-                          <Input type="email" name="email" id="exampleEmail" placeholder="Email here..."/>
+                          <Input type="email" name="email" id="exampleEmail" placeholder="Email here..." />
                         </FormGroup>
                       </Col>
                       <Col md={6}>
                         <FormGroup>
                           <Label for="exampleName">Name</Label>
-                          <Input type="text" name="text" id="exampleName" placeholder="Name here..."/>
+                          <Input type="text" name="text" id="exampleName" placeholder="Name here..." />
                         </FormGroup>
                       </Col>
                       <Col md={6}>
@@ -57,7 +59,7 @@ export default class Register extends Component {
                           <Label for="examplePassword">
                             <span className="text-danger">*</span> Password
                           </Label>
-                          <Input type="password" name="password" id="examplePassword" placeholder="Password here..."/>
+                          <Input type="password" name="password" id="examplePassword" placeholder="Password here..." />
                         </FormGroup>
                       </Col>
                       <Col md={6}>
@@ -66,7 +68,7 @@ export default class Register extends Component {
                             <span className="text-danger">*</span> Repeat
                             Password
                           </Label>
-                          <Input type="password" name="passwordrep" id="examplePasswordRep" placeholder="Repeat Password here..."/>
+                          <Input type="password" name="passwordrep" id="examplePasswordRep" placeholder="Repeat Password here..." />
                         </FormGroup>
                       </Col>
                     </Row>
@@ -83,7 +85,7 @@ export default class Register extends Component {
                     <div className="mt-4 d-flex align-items-center">
                       <h5 className="mb-0">
                         Already have an account?{" "}
-                        <a href="https://colorlib.com/" onClick={(e) => e.preventDefault()} className="text-primary">
+                        <a href="#/user/login" className="text-primary">
                           Sign in
                         </a>
                       </h5>
@@ -97,20 +99,50 @@ export default class Register extends Component {
                 </div>
               </Col>
             </Col>
-            <Col lg="5" className="d-lg-flex d-xs-none">
+            <Col lg="5" className="d-none d-lg-block">
               <div className="slider-light">
                 <Slider {...settings}>
+                  <div className="h-100 d-flex justify-content-center align-items-center bg-plum-plate">
+                    <div className="slide-img-bg"
+                      style={{
+                        backgroundImage: "url(" + bg1 + ")",
+                      }} />
+                    <div className="slider-content">
+                      <h3>Listen With Friends</h3>
+                      <p>
+                        With Listen Lab, you can listen to Spotify in real-time
+                        with your friends. Just create a room and send others
+                        the invite link to let them join in the fun!
+                      </p>
+                    </div>
+                  </div>
                   <div className="h-100 d-flex justify-content-center align-items-center bg-premium-dark">
                     <div className="slide-img-bg"
                       style={{
                         backgroundImage: "url(" + bg3 + ")",
-                      }}/>
+                      }} />
                     <div className="slider-content">
-                      <h3>Scalable, Modular, Consistent</h3>
+                      <h3>Vote For Songs</h3>
                       <p>
-                        Easily exclude the components you don't require.
-                        Lightweight, consistent Bootstrap based styles across
-                        all elements and components
+                        With Listen Lab, the community decides what plays next.
+                        Simply submit song requests and vote for your favorite
+                        songs. After every song, the next highest-voted song
+                        begins!
+                      </p>
+                    </div>
+                  </div>
+                  <div className="h-100 d-flex justify-content-center align-items-center bg-sunny-morning">
+                    <div className="slide-img-bg opacity-6"
+                      style={{
+                        backgroundImage: "url(" + bg2 + ")",
+                      }} />
+                    <div className="slider-content">
+                      <h3>Create Playlists</h3>
+                      <p>
+                        Had a great Listen Lab session with friends and want
+                        to save the tracklist? No problem! At any time in your
+                        room you can export the track history to a Spotify
+                        playlist!
                       </p>
                     </div>
                   </div>
