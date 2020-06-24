@@ -132,6 +132,7 @@
     "reactstrap": "^8.0.1",
     "recharts": "^1.8.5",
     "redux": "^4.0.4",
+    "redux-devtools-extension": "^2.13.8",
     "redux-form": "^8.2.6",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0",
