@@ -47,7 +47,7 @@ const AppMain = () => {
             </Suspense>
 
             <Route exact path="/" render={() => (
-                <Redirect to="/a" />
+                <Redirect to="/a/me" />
             )} />
 
             <ToastContainer />
