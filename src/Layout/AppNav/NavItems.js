@@ -1,5 +1,10 @@
 export const MainNav = [
   {
+    icon: "pe-7s-user",
+    label: "Profile",
+    to: "#/a/me"
+  },
+  {
     icon: "pe-7s-rocket",
     label: "Rooms",
     content: [
@@ -12,11 +17,6 @@ export const MainNav = [
         to: "#/a/rooms/join"
       }
     ]
-  },
-  {
-    icon: "pe-7s-user",
-    label: "Profile",
-    to: "#/a/me"
   },
   {
     icon: "pe-7s-users",
