@@ -35,7 +35,7 @@ const LoggedIn = () => {
                                 </div>
                             </div>
                         }>
-                            <Route path="/contact" component={Contact} />
+                            <Route path="/a/contact" component={Contact} />
                         </Suspense>
 
                         {/* Members */}
@@ -52,7 +52,7 @@ const LoggedIn = () => {
                                 </div>
                             </div>
                         }>
-                            <Route path="/members" component={Members} />
+                            <Route path="/a/members" component={Members} />
                         </Suspense>
 
                         {/* Profile */}
@@ -69,7 +69,7 @@ const LoggedIn = () => {
                                 </div>
                             </div>
                         }>
-                            <Route path="/me" component={Profile} />
+                            <Route path="/a/me" component={Profile} />
                         </Suspense>
 
                         {/* Rooms */}
@@ -86,7 +86,7 @@ const LoggedIn = () => {
                                 </div>
                             </div>
                         }>
-                            <Route path="/rooms" component={Rooms} />
+                            <Route path="/a/rooms" component={Rooms} />
                         </Suspense>
 
                         {/* Settings */}
@@ -103,12 +103,8 @@ const LoggedIn = () => {
                                 </div>
                             </div>
                         }>
-                            <Route path="/settings" component={Settings} />
+                            <Route path="/a/settings" component={Settings} />
                         </Suspense>
-
-                        <Route exact path="/" render={() => (
-                            <Redirect to="/rooms" />
-                        )} />
                     </div>
                 </div>
             </div>
