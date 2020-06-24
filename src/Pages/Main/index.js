@@ -6,6 +6,14 @@ import { withRouter } from "react-router-dom";
 import ResizeDetector from "react-resize-detector";
 
 import AppMain from "../../Layout/AppMain";
+import setAuthToken from '../../utils/setAuthToken';
+import { loadUser } from "../../actions/auth";
+import store from "../../store";
+
+
+if (localStorage.token) {
+  setAuthToken(localStorage.token)
+}
 
 class Main extends React.Component {
   constructor(props) {
@@ -13,6 +21,14 @@ class Main extends React.Component {
     this.state = {
       closedSmallerSidebar: false,
     };
+  }
+
+  componentDidMount() {
+    store.dispatch(loadUser());
+  }
+
+  componentWillUnmount() {
+    store.dispatch(loadUser());
   }
 
   render() {

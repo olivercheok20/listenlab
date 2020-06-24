@@ -20,7 +20,7 @@ const renderApp = (Component) => {
       </HashRouter>
     </Provider>,
     rootElement
-  );
+  )
 };
 
 renderApp(Main);
