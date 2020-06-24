@@ -144,12 +144,14 @@ const Login = ({ login, isAuthenticated }) => {
                       </FormGroup>
                     </Col>
                   </Row>
-                  <FormGroup check>
-                    <Input type="checkbox" name="check" id="exampleCheck" />
-                    <Label for="exampleCheck" check>
-                      Keep me logged in
-                      </Label>
-                  </FormGroup>
+                  {
+                    // <FormGroup check>
+                    //   <Input type="checkbox" name="check" id="exampleCheck" />
+                    //   <Label for="exampleCheck" check>
+                    //     Keep me logged in
+                    //   </Label>
+                    // </FormGroup>
+                  }
                   <Row className="divider" />
                   <div className="d-flex align-items-center">
                     <div className="ml-auto">
