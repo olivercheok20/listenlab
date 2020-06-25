@@ -8,7 +8,7 @@ const JoinRoom = ({ match }) => (
         <CSSTransitionGroup component="div" transitionName="TabsAnimation" transitionAppear={true}
             transitionAppearTimeout={0} transitionEnter={false} transitionLeave={false}>
             <PageTitle heading="Join Room"
-                icon="pe-7s-car icon-gradient bg-mean-fruit" />
+                icon="pe-7s-headphones icon-gradient bg-mean-fruit" />
         </CSSTransitionGroup>
     </Fragment>
 );

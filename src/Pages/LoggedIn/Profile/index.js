@@ -9,7 +9,7 @@ const Profile = ({ match }) => (
     <CSSTransitionGroup component="div" transitionName="TabsAnimation" transitionAppear={true}
       transitionAppearTimeout={0} transitionEnter={false} transitionLeave={false}>
       <PageTitle heading="Profile"
-        icon="pe-7s-car icon-gradient bg-mean-fruit" />
+        icon="pe-7s-user icon-gradient bg-mean-fruit" />
     </CSSTransitionGroup>
   </Fragment>
 );

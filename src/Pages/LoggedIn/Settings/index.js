@@ -9,7 +9,7 @@ const Settings = ({ match }) => (
     <CSSTransitionGroup component="div" transitionName="TabsAnimation" transitionAppear={true}
       transitionAppearTimeout={0} transitionEnter={false} transitionLeave={false}>
       <PageTitle heading="Settings"
-        icon="pe-7s-car icon-gradient bg-mean-fruit" />
+        icon="pe-7s-config icon-gradient bg-mean-fruit" />
     </CSSTransitionGroup>
   </Fragment>
 );

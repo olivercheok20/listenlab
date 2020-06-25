@@ -9,7 +9,7 @@ const Members = ({ match }) => (
     <CSSTransitionGroup component="div" transitionName="TabsAnimation" transitionAppear={true}
       transitionAppearTimeout={0} transitionEnter={false} transitionLeave={false}>
       <PageTitle heading="Members"
-        icon="pe-7s-car icon-gradient bg-mean-fruit" />
+        icon="pe-7s-users icon-gradient bg-mean-fruit" />
     </CSSTransitionGroup>
   </Fragment>
 );
