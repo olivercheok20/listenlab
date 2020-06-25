@@ -23,11 +23,12 @@ import city3 from "../../../assets/utils/images/dropdown-header/city3.jpg";
 import avatar1 from "../../../assets/utils/images/avatars/1.jpg";
 
 const mapStateToProps = state => {
-  console.log(state.auth.user.avatar)
-  return {
-    name: state.auth.user.name,
-    avatar: state.auth.user.avatar
-  };
+  if (state.auth.user) {
+    return {
+      name: state.auth.user.name,
+      avatar: state.auth.user.avatar
+    };
+  }
 };
 
 const UserBox = ({ logout, name, avatar }) => {
