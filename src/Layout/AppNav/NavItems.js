@@ -36,6 +36,6 @@ export const MainNav = [
   {
     icon: "pe-7s-close-circle",
     label: "Logout",
-    to: "#/user/login"
+    to: "#/a/logout"
   },
 ]
