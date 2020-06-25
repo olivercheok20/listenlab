@@ -1,6 +1,8 @@
-import { Route, Redirect } from "react-router-dom";
 import React, { Suspense, lazy, Fragment } from "react";
+import { Route, Redirect } from "react-router-dom";
 import Loader from "react-loaders";
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import ThemeOptions from "../../Layout/ThemeOptions";
 import AppHeader from "../../Layout/AppHeader";
 import AppSidebar from "../../Layout/AppSidebar";
@@ -11,7 +13,12 @@ const Profile = lazy(() => import("./Profile"));
 const Rooms = lazy(() => import("./Rooms"));
 const Settings = lazy(() => import("./Settings"));
 
-const LoggedIn = () => {
+const LoggedIn = ({ isAuthenticated }) => {
+
+    if (!isAuthenticated) {
+        return <Redirect to="/user/login" />
+    };
+
     return (
         <Fragment>
             <ThemeOptions />
@@ -112,4 +119,12 @@ const LoggedIn = () => {
     )
 };
 
-export default LoggedIn;
+LoggedIn.propTypes = {
+    isAuthenticated: PropTypes.bool,
+}
+
+const mapStateToProps = state => ({
+    isAuthenticated: state.auth.isAuthenticated
+});
+
+export default connect(mapStateToProps)(LoggedIn);
