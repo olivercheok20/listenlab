@@ -17,12 +17,12 @@ const Profile = ({ getCurrentProfile, auth, profile }) => {
     <Fragment>
       <CSSTransitionGroup component="div" transitionName="TabsAnimation" transitionAppear={true}
         transitionAppearTimeout={0} transitionEnter={false} transitionLeave={false}>
-        <PageTitle heading="Profile"
+        <PageTitle heading={profile.profile ? profile.profile.user.name : "Profile"}
           icon="pe-7s-user icon-gradient bg-mean-fruit" />
         <UsageInfo
-          numberOfRoomsCreated={profile.profile.numberOfRoomsCreated}
-          numberOfRoomsJoined={profile.profile.numberOfRoomsJoined}
-          numberOfSongsPlayed={profile.profile.numberOfSongsPlayed} />
+          numberOfRoomsCreated={profile.profile ? profile.profile.numberOfRoomsCreated : 0}
+          numberOfRoomsJoined={profile.profile ? profile.profile.numberOfRoomsJoined : 0}
+          numberOfSongsPlayed={profile.profile ? profile.profile.numberOfSongsPlayed : 0} />
       </CSSTransitionGroup>
     </Fragment>
   )

@@ -64,7 +64,7 @@ export default class AnalyticsDashboard1 extends Component {
                                         <div className="widget-subheading">Rooms Created</div>
                                         <div className="widget-numbers">
                                             <CountUp start={0} end={this.props.numberOfRoomsCreated}
-                                                useEasing={true} duration="1" />
+                                                useEasing={true} duration="3" />
                                         </div>
                                     </div>
                                 </div>
@@ -80,7 +80,7 @@ export default class AnalyticsDashboard1 extends Component {
                                         <div className="widget-subheading">Rooms Joined</div>
                                         <div className="widget-numbers">
                                             <CountUp start={0} end={this.props.numberOfRoomsJoined}
-                                                useEasing={true} duration="1" />
+                                                useEasing={true} duration="3" />
                                         </div>
                                     </div>
                                 </div>
@@ -95,7 +95,7 @@ export default class AnalyticsDashboard1 extends Component {
                                     <div className="widget-chart-content">
                                         <div className="widget-subheading">Songs Played</div>
                                         <div className="widget-numbers">
-                                            <CountUp start={0} end={this.props.numberOfSongsPlayed} useEasing={true} duration="1" />
+                                            <CountUp start={0} end={this.props.numberOfSongsPlayed} useEasing={true} duration="3" />
                                         </div>
                                     </div>
                                 </div>
