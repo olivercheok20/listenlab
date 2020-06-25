@@ -15,7 +15,6 @@ const Nav = ({ logout, location, enableMobileMenu, setEnableMobileMenu }) => {
   };
 
   if (isPathActive('/a/logout')) {
-    console.log('logout');
     logout();
   }
 
