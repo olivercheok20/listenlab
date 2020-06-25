@@ -20,7 +20,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { logout } from '../../../actions/auth';
 import city3 from "../../../assets/utils/images/dropdown-header/city3.jpg";
-import avatar1 from "../../../assets/utils/images/avatars/1.jpg";
 
 const mapStateToProps = state => {
   if (state.auth.user) {
