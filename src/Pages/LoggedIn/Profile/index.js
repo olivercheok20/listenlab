@@ -1,17 +1,38 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect } from "react";
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import { Route } from "react-router-dom";
 import CSSTransitionGroup from "react-transition-group/CSSTransitionGroup";
 
+import { getCurrentProfile } from '../../../actions/profile';
 import PageTitle from "../../../Layout/AppMain/PageTitle";
 
-const Profile = ({ match }) => (
-  <Fragment>
-    <CSSTransitionGroup component="div" transitionName="TabsAnimation" transitionAppear={true}
-      transitionAppearTimeout={0} transitionEnter={false} transitionLeave={false}>
-      <PageTitle heading="Profile"
-        icon="pe-7s-user icon-gradient bg-mean-fruit" />
-    </CSSTransitionGroup>
-  </Fragment>
-);
+const Profile = ({ getCurrentProfile, auth, profile }) => {
+  useEffect(() => {
+    getCurrentProfile();
+  }, []);
 
-export default Profile;
+  return (
+    <Fragment>
+      <CSSTransitionGroup component="div" transitionName="TabsAnimation" transitionAppear={true}
+        transitionAppearTimeout={0} transitionEnter={false} transitionLeave={false}>
+        <PageTitle heading="Profile"
+          icon="pe-7s-user icon-gradient bg-mean-fruit" />
+      </CSSTransitionGroup>
+    </Fragment>
+  )
+
+}
+
+Profile.propTypes = {
+  getCurrentProfile: PropTypes.func.isRequired,
+  auth: PropTypes.object.isRequired,
+  profile: PropTypes.object.isRequired,
+}
+
+const mapStateToProps = state => ({
+  auth: state.auth,
+  profile: state.profile
+})
+
+export default connect(mapStateToProps, { getCurrentProfile })(Profile);
