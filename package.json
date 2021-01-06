@@ -21,7 +21,7 @@
     "apexcharts": "^3.8.6",
     "aphrodite": "^2.4.0",
     "availity-reactstrap-validation": "^2.6.1",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "bootstrap": "^4.3.1",
     "chart.js": "^2.8.0",
     "chartist": "^0.10.1",
