@@ -18,7 +18,7 @@
     "@types/markerclustererplus": "^2.1.33",
     "@wojtekmaj/react-datetimerange-picker": "^2.3.0",
     "animate-sass": "^0.8.2",
-    "apexcharts": "^3.8.6",
+    "apexcharts": "^3.24.0",
     "aphrodite": "^2.4.0",
     "availity-reactstrap-validation": "^2.6.1",
     "axios": "^0.19.2",
